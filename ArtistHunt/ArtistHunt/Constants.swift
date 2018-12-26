@@ -8,10 +8,8 @@
 
 import Foundation
 
-struct K {
-    struct ProductionServer {
-        static let baseURL = "http://projecten3studserver03.westeurope.cloudapp.azure.com:3001"
-    }
+struct Constants {
+    static let baseURL = "http://projecten3studserver03.westeurope.cloudapp.azure.com:3001"
     
     struct APIParameterKey {
         static let password = "password"

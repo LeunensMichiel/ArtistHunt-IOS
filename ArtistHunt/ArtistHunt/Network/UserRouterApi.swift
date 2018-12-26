@@ -39,14 +39,14 @@ enum UserRouterApi: URLRequestConvertible {
     private var parameters: Parameters? {
         switch self {
         case .login(let email, let password):
-            return [K.APIParameterKey.email: email, K.APIParameterKey.password: password]
+            return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password]
         case .register(let email, let password, let firstname, let lastname):
-            return [K.APIParameterKey.email: email, K.APIParameterKey.password: password, K.APIParameterKey.firstname: firstname, K.APIParameterKey.lastname: lastname]
+            return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password, Constants.APIParameterKey.firstname: firstname, Constants.APIParameterKey.lastname: lastname]
         }
     }
     
     func asURLRequest() throws -> URLRequest {
-        let url = try K.ProductionServer.baseURL.asURL()
+        let url = try Constants.baseURL.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
@@ -58,14 +58,15 @@ enum UserRouterApi: URLRequestConvertible {
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
         
         // Parameters
-        if let parameters = parameters {
-            do {
-                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
-            } catch {
-                throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+        let encoding: ParameterEncoding = {
+            switch method {
+            case .get:
+                return URLEncoding.default
+            default:
+                return JSONEncoding.default
             }
-        }
+        }()
         
-        return urlRequest
+        return try encoding.encode(urlRequest, with: parameters)
     }
 }
