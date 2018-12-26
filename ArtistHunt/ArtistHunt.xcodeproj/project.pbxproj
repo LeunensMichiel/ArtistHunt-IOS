@@ -18,6 +18,7 @@
 		D040FACD21D1B8930021AD61 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FACC21D1B8930021AD61 /* ProfileViewController.swift */; };
 		D040FACF21D1B9690021AD61 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FACE21D1B9690021AD61 /* LoginViewController.swift */; };
 		D040FAD121D1B97F0021AD61 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */; };
+		D040FAD621D2E5B20021AD61 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FAD521D2E5B20021AD61 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D040FACC21D1B8930021AD61 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D040FACE21D1B9690021AD61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D040FAD521D2E5B20021AD61 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +107,10 @@
 		D040FA9A21D1AFA60021AD61 /* ArtistHunt */ = {
 			isa = PBXGroup;
 			children = (
+				D040FAD421D2DFCC0021AD61 /* Controllers */,
+				D040FAD221D2D6080021AD61 /* Domain */,
 				D040FACB21D1B3230021AD61 /* Authentication */,
 				D040FA9B21D1AFA60021AD61 /* AppDelegate.swift */,
-				D040FACC21D1B8930021AD61 /* ProfileViewController.swift */,
-				D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */,
-				D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */,
 				D040FAA121D1AFA60021AD61 /* Main.storyboard */,
 				D040FAA421D1AFA70021AD61 /* Assets.xcassets */,
 				D040FAA621D1AFA70021AD61 /* LaunchScreen.storyboard */,
@@ -143,6 +144,32 @@
 				D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D040FAD221D2D6080021AD61 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D040FAD321D2DFBC0021AD61 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D040FAD321D2DFBC0021AD61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D040FAD521D2E5B20021AD61 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D040FAD421D2DFCC0021AD61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D040FACC21D1B8930021AD61 /* ProfileViewController.swift */,
+				D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */,
+				D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D040FAD621D2E5B20021AD61 /* Model.swift in Sources */,
 				D040FAD121D1B97F0021AD61 /* RegistrationViewController.swift in Sources */,
 				D040FAA021D1AFA60021AD61 /* AddPostViewController.swift in Sources */,
 				D040FA9C21D1AFA60021AD61 /* AppDelegate.swift in Sources */,
