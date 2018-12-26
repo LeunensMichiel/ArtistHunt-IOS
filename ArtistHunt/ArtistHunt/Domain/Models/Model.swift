@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct Login {
+struct Login: Codable {
     var email: String
     var password: String
 }
 
-struct Register {
+struct Register: Codable {
     var email: String
     var password: String
     var firstname: String
     var lastname: String
 }
 
-struct User {
+struct User: Codable {
     var _id: String?
     var firstname: String?
     var lastname: String?
@@ -29,7 +29,7 @@ struct User {
     var profile_image_filename: String?
 }
 
-struct Post {
+struct Post: Codable {
     var _id: String?
     var title: String?
     var description: String?

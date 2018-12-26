@@ -20,10 +20,19 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func login(_ sender: Any) {
-        
+        if let email = login_email_textfield.text, let password = login_password_textfield.text {
+            UserLayer.login(email: email, password: password) { result in
+                switch result {
+                case .success(let user):
+                    print(user)
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
-    @IBAction func register(_ sender: Any) {
-    }
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {}
 
 }
