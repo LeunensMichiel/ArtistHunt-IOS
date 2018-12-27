@@ -11,11 +11,12 @@ target 'ArtistHunt' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'KeychainSwift', '~> 13.0'
-
+  pod 'RealmSwift', '~> 3.13'
 
   target 'ArtistHuntTests' do
     inherit! :search_paths
-    # Pods for testing
+    use_frameworks!
+    pod 'RealmSwift', '~> 3.13'    # Pods for testing
   end
 
   target 'ArtistHuntUITests' do

@@ -20,14 +20,14 @@ struct Register: Codable {
     var lastname: String
 }
 
-struct User: Codable {
-    var _id: String?
-    var firstname: String?
-    var lastname: String?
-    var email: String?
-    var token: String?
-    var profile_image_filename: String?
-}
+//struct User: Codable {
+//    var _id: String?
+//    var firstname: String?
+//    var lastname: String?
+//    var email: String?
+//    var token: String?
+//    var profile_image_filename: String?
+//}
 
 struct Post: Codable {
     var _id: String?

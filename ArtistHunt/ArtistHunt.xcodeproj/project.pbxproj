@@ -27,6 +27,8 @@
 		D0B8449421D4290200451B50 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449321D4290200451B50 /* AuthenticationController.swift */; };
 		D0B8449621D44F5700451B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B8449521D44F5700451B50 /* Assets.xcassets */; };
 		D0B8449921D455BE00451B50 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449821D455BE00451B50 /* CustomTabBarController.swift */; };
+		D0B8449B21D46AC400451B50 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449A21D46AC400451B50 /* RealmModels.swift */; };
+		D0B8449E21D470D000451B50 /* ArtisthuntRealmDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449D21D470D000451B50 /* ArtisthuntRealmDb.swift */; };
 		EF878E15CEC95CCFC16A9F39 /* Pods_ArtistHuntUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB428F570AFE43896AFBEC9B /* Pods_ArtistHuntUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		D0B8449321D4290200451B50 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		D0B8449521D44F5700451B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		D0B8449821D455BE00451B50 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		D0B8449A21D46AC400451B50 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		D0B8449D21D470D000451B50 /* ArtisthuntRealmDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisthuntRealmDb.swift; sourceTree = "<group>"; };
 		EB428F570AFE43896AFBEC9B /* Pods_ArtistHuntUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtistHuntUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD6E7AB1E2ABA3FC7A8D31C /* Pods-ArtistHuntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtistHuntTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtistHuntTests/Pods-ArtistHuntTests.release.xcconfig"; sourceTree = "<group>"; };
 		F57B97CDFF3C52C811F68FC0 /* Pods-ArtistHuntUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtistHuntUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtistHuntUITests/Pods-ArtistHuntUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		D040FA9A21D1AFA60021AD61 /* ArtistHunt */ = {
 			isa = PBXGroup;
 			children = (
+				D0B8449C21D4709000451B50 /* Persistence */,
 				D0B8449721D4559D00451B50 /* Utils */,
 				D0B8448A21D3228E00451B50 /* Network */,
 				D040FAD421D2DFCC0021AD61 /* Controllers */,
@@ -213,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				D040FAD521D2E5B20021AD61 /* Model.swift */,
+				D0B8449A21D46AC400451B50 /* RealmModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +252,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D0B8449C21D4709000451B50 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D0B8449D21D470D000451B50 /* ArtisthuntRealmDb.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +290,7 @@
 				D040FAAA21D1AFA70021AD61 /* Sources */,
 				D040FAAB21D1AFA70021AD61 /* Frameworks */,
 				D040FAAC21D1AFA70021AD61 /* Resources */,
+				562631778AD9496E0D636DCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +425,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ArtistHunt/Pods-ArtistHunt-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -421,6 +438,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -429,6 +448,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtistHunt/Pods-ArtistHunt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		562631778AD9496E0D636DCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArtistHuntTests/Pods-ArtistHuntTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtistHuntTests/Pods-ArtistHuntTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7E1DCEEC3802F0D1134D55B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -493,7 +536,9 @@
 				D040FACF21D1B9690021AD61 /* LoginViewController.swift in Sources */,
 				D0B8449421D4290200451B50 /* AuthenticationController.swift in Sources */,
 				D0B8449921D455BE00451B50 /* CustomTabBarController.swift in Sources */,
+				D0B8449B21D46AC400451B50 /* RealmModels.swift in Sources */,
 				D0B8448C21D322C700451B50 /* UserClient.swift in Sources */,
+				D0B8449E21D470D000451B50 /* ArtisthuntRealmDb.swift in Sources */,
 				D040FA9E21D1AFA60021AD61 /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
