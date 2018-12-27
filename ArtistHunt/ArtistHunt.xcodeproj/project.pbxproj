@@ -20,6 +20,7 @@
 		D040FACF21D1B9690021AD61 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FACE21D1B9690021AD61 /* LoginViewController.swift */; };
 		D040FAD121D1B97F0021AD61 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */; };
 		D040FAD621D2E5B20021AD61 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FAD521D2E5B20021AD61 /* Model.swift */; };
+		D092F62621D5333D00FEF177 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092F62521D5333D00FEF177 /* PostCollectionViewCell.swift */; };
 		D0B8448C21D322C700451B50 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8448B21D322C700451B50 /* UserClient.swift */; };
 		D0B8448E21D39A8100451B50 /* UserRouterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8448D21D39A8100451B50 /* UserRouterApi.swift */; };
 		D0B8449021D39FE600451B50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8448F21D39FE600451B50 /* Constants.swift */; };
@@ -73,6 +74,7 @@
 		D040FACE21D1B9690021AD61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D040FAD521D2E5B20021AD61 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D092F62521D5333D00FEF177 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0B8448B21D322C700451B50 /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
 		D0B8448D21D39A8100451B50 /* UserRouterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouterApi.swift; sourceTree = "<group>"; };
 		D0B8448F21D39FE600451B50 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -163,6 +165,9 @@
 		D040FA9A21D1AFA60021AD61 /* ArtistHunt */ = {
 			isa = PBXGroup;
 			children = (
+				D092F62421D532F300FEF177 /* Profile */,
+				D092F62321D532E900FEF177 /* AddPost */,
+				D092F62221D532DA00FEF177 /* Post */,
 				D0B8449C21D4709000451B50 /* Persistence */,
 				D0B8449721D4559D00451B50 /* Utils */,
 				D0B8448A21D3228E00451B50 /* Network */,
@@ -226,11 +231,33 @@
 		D040FAD421D2DFCC0021AD61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D040FACC21D1B8930021AD61 /* ProfileViewController.swift */,
-				D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */,
-				D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D092F62221D532DA00FEF177 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */,
+				D092F62521D5333D00FEF177 /* PostCollectionViewCell.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		D092F62321D532E900FEF177 /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */,
+			);
+			path = AddPost;
+			sourceTree = "<group>";
+		};
+		D092F62421D532F300FEF177 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D040FACC21D1B8930021AD61 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		D0B8448A21D3228E00451B50 /* Network */ = {
@@ -529,6 +556,7 @@
 				D0B8448E21D39A8100451B50 /* UserRouterApi.swift in Sources */,
 				D040FAD121D1B97F0021AD61 /* RegistrationViewController.swift in Sources */,
 				D0B8449221D3C48E00451B50 /* APIErrorConstants.swift in Sources */,
+				D092F62621D5333D00FEF177 /* PostCollectionViewCell.swift in Sources */,
 				D040FAA021D1AFA60021AD61 /* AddPostViewController.swift in Sources */,
 				D040FA9C21D1AFA60021AD61 /* AppDelegate.swift in Sources */,
 				D0B8449021D39FE600451B50 /* Constants.swift in Sources */,
