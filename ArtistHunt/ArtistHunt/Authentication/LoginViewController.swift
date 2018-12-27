@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func login(_ sender: Any) {
+        view.endEditing(true)
+        
         guard let email = login_email_textfield.text, email.count > 0 else {
             return
         }
@@ -36,6 +38,7 @@ class LoginViewController: UIViewController {
                 .subscribe(onNext: { result in
                     print(result)
                     if (result.token != nil) {
+                        AuthenticationController.login(token: result.token!)
                         self.performSegue(withIdentifier: "loginSegue", sender: self)
                     }
                 }, onError: { error in

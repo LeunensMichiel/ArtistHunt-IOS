@@ -16,7 +16,15 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logout(_ sender: Any) {
+        AuthenticationController.logout()
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+        //https://stackoverflow.com/questions/27374759/programmatically-navigate-to-another-view-controller-scene
+    }
+    
     /*
     // MARK: - Navigation
 

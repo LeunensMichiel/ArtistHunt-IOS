@@ -10,6 +10,8 @@ target 'ArtistHunt' do
   pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'KeychainSwift', '~> 13.0'
+
 
   target 'ArtistHuntTests' do
     inherit! :search_paths

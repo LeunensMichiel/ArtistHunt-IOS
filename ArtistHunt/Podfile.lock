@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
+  - KeychainSwift (13.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
+  - KeychainSwift (~> 13.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SkyFloatingLabelTextField (~> 3.0)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - KeychainSwift
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -23,11 +26,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
 
-PODFILE CHECKSUM: 59a4609c5bf0c1271bded30216201334f69b58cc
+PODFILE CHECKSUM: 6f88c9cfb3355c4e8343b5d323e24934e8669429
 
 COCOAPODS: 1.5.3

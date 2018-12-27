@@ -13,7 +13,6 @@
 		D040FA9E21D1AFA60021AD61 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */; };
 		D040FAA021D1AFA60021AD61 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */; };
 		D040FAA321D1AFA60021AD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D040FAA121D1AFA60021AD61 /* Main.storyboard */; };
-		D040FAA521D1AFA70021AD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D040FAA421D1AFA70021AD61 /* Assets.xcassets */; };
 		D040FAA821D1AFA70021AD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D040FAA621D1AFA70021AD61 /* LaunchScreen.storyboard */; };
 		D040FAB321D1AFA70021AD61 /* ArtistHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FAB221D1AFA70021AD61 /* ArtistHuntTests.swift */; };
 		D040FABE21D1AFA70021AD61 /* ArtistHuntUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040FABD21D1AFA70021AD61 /* ArtistHuntUITests.swift */; };
@@ -25,6 +24,9 @@
 		D0B8448E21D39A8100451B50 /* UserRouterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8448D21D39A8100451B50 /* UserRouterApi.swift */; };
 		D0B8449021D39FE600451B50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8448F21D39FE600451B50 /* Constants.swift */; };
 		D0B8449221D3C48E00451B50 /* APIErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449121D3C48E00451B50 /* APIErrorConstants.swift */; };
+		D0B8449421D4290200451B50 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449321D4290200451B50 /* AuthenticationController.swift */; };
+		D0B8449621D44F5700451B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B8449521D44F5700451B50 /* Assets.xcassets */; };
+		D0B8449921D455BE00451B50 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8449821D455BE00451B50 /* CustomTabBarController.swift */; };
 		EF878E15CEC95CCFC16A9F39 /* Pods_ArtistHuntUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB428F570AFE43896AFBEC9B /* Pods_ArtistHuntUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +59,6 @@
 		D040FA9D21D1AFA60021AD61 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		D040FA9F21D1AFA60021AD61 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		D040FAA221D1AFA60021AD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D040FAA421D1AFA70021AD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D040FAA721D1AFA70021AD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D040FAA921D1AFA70021AD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D040FAAE21D1AFA70021AD61 /* ArtistHuntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistHuntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +75,9 @@
 		D0B8448D21D39A8100451B50 /* UserRouterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouterApi.swift; sourceTree = "<group>"; };
 		D0B8448F21D39FE600451B50 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0B8449121D3C48E00451B50 /* APIErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorConstants.swift; sourceTree = "<group>"; };
+		D0B8449321D4290200451B50 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		D0B8449521D44F5700451B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		D0B8449821D455BE00451B50 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		EB428F570AFE43896AFBEC9B /* Pods_ArtistHuntUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtistHuntUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD6E7AB1E2ABA3FC7A8D31C /* Pods-ArtistHuntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtistHuntTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtistHuntTests/Pods-ArtistHuntTests.release.xcconfig"; sourceTree = "<group>"; };
 		F57B97CDFF3C52C811F68FC0 /* Pods-ArtistHuntUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtistHuntUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtistHuntUITests/Pods-ArtistHuntUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,16 +159,16 @@
 		D040FA9A21D1AFA60021AD61 /* ArtistHunt */ = {
 			isa = PBXGroup;
 			children = (
+				D0B8449721D4559D00451B50 /* Utils */,
 				D0B8448A21D3228E00451B50 /* Network */,
 				D040FAD421D2DFCC0021AD61 /* Controllers */,
 				D040FAD221D2D6080021AD61 /* Domain */,
 				D040FACB21D1B3230021AD61 /* Authentication */,
 				D040FA9B21D1AFA60021AD61 /* AppDelegate.swift */,
 				D040FAA121D1AFA60021AD61 /* Main.storyboard */,
-				D040FAA421D1AFA70021AD61 /* Assets.xcassets */,
+				D0B8449521D44F5700451B50 /* Assets.xcassets */,
 				D040FAA621D1AFA70021AD61 /* LaunchScreen.storyboard */,
 				D040FAA921D1AFA70021AD61 /* Info.plist */,
-				D0B8448F21D39FE600451B50 /* Constants.swift */,
 			);
 			path = ArtistHunt;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 			children = (
 				D040FACE21D1B9690021AD61 /* LoginViewController.swift */,
 				D040FAD021D1B97F0021AD61 /* RegistrationViewController.swift */,
+				D0B8449321D4290200451B50 /* AuthenticationController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -230,6 +235,15 @@
 				D0B8449121D3C48E00451B50 /* APIErrorConstants.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D0B8449721D4559D00451B50 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0B8448F21D39FE600451B50 /* Constants.swift */,
+				D0B8449821D455BE00451B50 /* CustomTabBarController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D040FAA821D1AFA70021AD61 /* LaunchScreen.storyboard in Resources */,
-				D040FAA521D1AFA70021AD61 /* Assets.xcassets in Resources */,
+				D0B8449621D44F5700451B50 /* Assets.xcassets in Resources */,
 				D040FAA321D1AFA60021AD61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +409,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ArtistHunt/Pods-ArtistHunt-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -405,6 +420,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -475,6 +491,8 @@
 				D0B8449021D39FE600451B50 /* Constants.swift in Sources */,
 				D040FACD21D1B8930021AD61 /* ProfileViewController.swift in Sources */,
 				D040FACF21D1B9690021AD61 /* LoginViewController.swift in Sources */,
+				D0B8449421D4290200451B50 /* AuthenticationController.swift in Sources */,
+				D0B8449921D455BE00451B50 /* CustomTabBarController.swift in Sources */,
 				D0B8448C21D322C700451B50 /* UserClient.swift in Sources */,
 				D040FA9E21D1AFA60021AD61 /* PostsViewController.swift in Sources */,
 			);

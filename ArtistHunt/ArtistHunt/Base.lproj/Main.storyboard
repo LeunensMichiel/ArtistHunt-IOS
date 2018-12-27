@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gda-cA-9AC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts View Controller-->
+        <!--Add Post-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="PostsViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="AddPostViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Add Post" image="plus" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,42 +55,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geen idee wat ik aan het doen ben" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heP-IN-yAB">
-                                <rect key="frame" x="76" y="318" width="168" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="THIRD VIEW" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0I0-rR-xea">
-                                <rect key="frame" x="90" y="265" width="140" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n29-My-hjh">
+                                <rect key="frame" x="32" y="447" width="256" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kt9-Cn-gw8"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="olw-LP-Hpo" eventType="touchUpInside" id="ptm-fo-srP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="heP-IN-yAB" firstAttribute="leading" secondItem="V7G-yp-Ek7" secondAttribute="leading" constant="76" id="B3i-WA-YXU"/>
-                            <constraint firstItem="heP-IN-yAB" firstAttribute="top" secondItem="0I0-rR-xea" secondAttribute="bottom" constant="10" id="Imt-mX-J0g"/>
-                            <constraint firstItem="V7G-yp-Ek7" firstAttribute="trailing" secondItem="heP-IN-yAB" secondAttribute="trailing" constant="76" id="XeG-b0-Fxg"/>
-                            <constraint firstAttribute="centerX" secondItem="0I0-rR-xea" secondAttribute="centerX" id="f9v-XG-y0B"/>
-                            <constraint firstItem="0I0-rR-xea" firstAttribute="top" secondItem="V7G-yp-Ek7" secondAttribute="top" constant="245" id="g8o-9K-ijX"/>
-                            <constraint firstItem="0I0-rR-xea" firstAttribute="leading" secondItem="V7G-yp-Ek7" secondAttribute="leading" constant="90" id="lW3-ek-qS0"/>
-                            <constraint firstItem="V7G-yp-Ek7" firstAttribute="trailing" secondItem="0I0-rR-xea" secondAttribute="trailing" constant="90" id="tjH-tL-J3O"/>
+                            <constraint firstItem="n29-My-hjh" firstAttribute="leading" secondItem="V7G-yp-Ek7" secondAttribute="leading" constant="32" id="I6I-bK-CLO"/>
+                            <constraint firstItem="V7G-yp-Ek7" firstAttribute="trailing" secondItem="n29-My-hjh" secondAttribute="trailing" constant="32" id="gNl-Au-7U9"/>
+                            <constraint firstItem="V7G-yp-Ek7" firstAttribute="bottom" secondItem="n29-My-hjh" secondAttribute="bottom" constant="32" id="nIx-pb-0Pz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V7G-yp-Ek7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="kv9-Hy-dcF"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="kv9-Hy-dcF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibf-dt-MXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="1065.5172413793105"/>
         </scene>
-        <!--Add Post View Controller-->
+        <!--Posts-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="AddPostViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postsVC" id="8rJ-Kc-sve" customClass="PostsViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="home" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +120,7 @@
         <!--Login View Controller-->
         <scene sceneID="Ujl-Rd-22D">
             <objects>
-                <viewController title="Login View Controller" id="r7y-2Q-JTu" customClass="LoginViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="Login View Controller" id="r7y-2Q-JTu" customClass="LoginViewController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k8J-Z8-bVr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,15 +346,21 @@
             </objects>
             <point key="canvasLocation" x="-915" y="859"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                <tabBarController storyboardIdentifier="baseNavigation" id="49e-Tb-3d3" customClass="BaseTabBarController" customModule="ArtistHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
@@ -392,5 +391,8 @@
     </scenes>
     <resources>
         <image name="adult-beautiful-blur-374703" width="1306.3199462890625" height="871"/>
+        <image name="home" width="30" height="30"/>
+        <image name="plus" width="30" height="30"/>
+        <image name="user" width="30" height="30"/>
     </resources>
 </document>
