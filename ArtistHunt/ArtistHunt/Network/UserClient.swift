@@ -15,6 +15,10 @@ class UserClient {
         return request(UserRouterApi.login(email: email, password: password))
     }
     
+    static func register(email: String, password: String, firstname: String, lastname: String) -> Observable<User> {
+        return request(UserRouterApi.register(email: email, password: password, firstname: firstname, lastname: lastname))
+    }
+    
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         //Create an RxSwift observable, which will be the one to call the request when subscribed to
         return Observable<T>.create { observer in

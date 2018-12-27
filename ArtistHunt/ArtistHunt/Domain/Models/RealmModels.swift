@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class User: Object {
+class RealmUser: Object {
     @objc dynamic var _id: String? = ""
     @objc dynamic var firstname: String? = ""
     @objc dynamic var lastname: String? = ""

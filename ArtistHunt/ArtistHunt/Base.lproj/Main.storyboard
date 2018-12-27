@@ -258,6 +258,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registry_signUp:" destination="1wx-Ys-1Ht" eventType="touchUpInside" id="NV8-NO-Yu1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-RX-ena">
                                 <rect key="frame" x="32" y="224" width="256" height="40"/>
@@ -336,6 +339,7 @@
                         <outlet property="registry_passRepeat_txf" destination="hPw-Ac-my0" id="o7G-Xq-5tb"/>
                         <outlet property="registry_pass_txf" destination="gCf-RX-ena" id="YhY-Uo-2d9"/>
                         <segue destination="7yq-2y-bvI" kind="unwind" identifier="unwindToLoginSegue" unwindAction="unwindToLoginWithSegue:" id="2Hg-uA-4mt"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="registerSegue" id="1OP-p0-1If"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-Le-Cqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -392,4 +396,7 @@
         <image name="plus" width="30" height="30"/>
         <image name="user" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1OP-p0-1If"/>
+    </inferredMetricsTieBreakers>
 </document>

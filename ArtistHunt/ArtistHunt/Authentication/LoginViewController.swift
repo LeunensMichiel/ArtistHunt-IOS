@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var login_email_textfield: UITextField!
     @IBOutlet weak var login_password_textfield: UITextField!
     private let disposeBag = DisposeBag()
+    private let localDB = ArtisthuntRealmDb()
 
     
     override func viewDidLoad() {
@@ -38,7 +39,14 @@ class LoginViewController: UIViewController {
                 .subscribe(onNext: { result in
                     print(result)
                     if (result.token != nil) {
-                        AuthenticationController.login(token: result.token!)
+                        //We place _id and token in the User Keychain
+                        AuthenticationController.login(token: result.token!, _id: result._id!)
+                        
+                        if (self.localDB.findUserByID(by: result._id!).isEmpty) {
+                            let dbUser = self.localDB.createDbUser(_id: result._id!, email: result.email!, firstname: result.firstname!, lastname: result.lastname!, token: result.token!, profileImage: result.profile_image_filename)
+                            self.localDB.saveUser(user: dbUser)
+                        }
+                        
                         self.performSegue(withIdentifier: "loginSegue", sender: self)
                     }
                 }, onError: { error in
