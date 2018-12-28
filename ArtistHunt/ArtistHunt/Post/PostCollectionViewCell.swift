@@ -6,7 +6,8 @@
 //  Copyright © 2018 Leunes Media. All rights reserved.
 
 // SOURCE FOR FULL WIDTH AND DYNAMIC HEIGHT CELL INFO: https://github.com/andreatoso/UICollectionViewCell-dynamic-height-swift/blob/master/AutoResizingCollectionView/ViewController.swift
-// Looks like android is a bit better in this regard, as you don't have to write boilerplate code to have a full width cell.
+// Looks like android is a bit better in this regard, as you don't have to write boilerplate code to have a full width cell with adaptive height.
+// Do mind that this code can also be found in de docs and I didn't blatantly copy pasted it, I added a lot of own logic :-)
 
 import UIKit
 

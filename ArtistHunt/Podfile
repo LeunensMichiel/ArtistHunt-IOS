@@ -13,7 +13,7 @@ target 'ArtistHunt' do
   pod 'KeychainSwift', '~> 13.0'
   pod 'RealmSwift', '~> 3.13'
   pod 'Nuke', '~> 7.0'
-
+  pod 'YPImagePicker'
 
 
   target 'ArtistHuntTests' do
