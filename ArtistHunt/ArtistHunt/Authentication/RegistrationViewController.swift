@@ -48,7 +48,7 @@ class RegistrationViewController: UIViewController {
         }
         
         if (password == passwordRepeat) {
-            UserClient.register(email: email, password: password, firstname: firstname, lastname: lastname)
+            RouterClient.register(email: email, password: password, firstname: firstname, lastname: lastname)
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { result in
                     print(result)

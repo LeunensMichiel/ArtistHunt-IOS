@@ -28,7 +28,12 @@ class AddPostViewController: UIViewController {
             return
         }
         
-        print(title + description)
+        if (add_post_imageView.image != nil) {
+            var imageData = add_post_imageView.image?.jpegData(compressionQuality: 1)
+
+        } else {
+            
+        }
     }
 
     @IBAction func addPostImageClicked(_ sender: Any) {
@@ -43,6 +48,7 @@ class AddPostViewController: UIViewController {
             if let photo = items.singlePhoto {
                 self.add_post_imageView.contentMode = .scaleAspectFit
                 self.add_post_imageView.image = photo.image
+                print(photo.image)
             }
             if cancelled {
                 print("Image picking was canceled")

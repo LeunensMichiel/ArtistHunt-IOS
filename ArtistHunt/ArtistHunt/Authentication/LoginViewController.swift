@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         }
         
         if let email = login_email_textfield.text, let password = login_password_textfield.text {
-            UserClient.login(email: email, password: password)
+            RouterClient.login(email: email, password: password)
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { result in
                     print(result)

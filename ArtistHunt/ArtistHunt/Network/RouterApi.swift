@@ -9,11 +9,13 @@
 import Foundation
 import Alamofire
 
-enum UserRouterApi: URLRequestConvertible {
+enum RouterApi: URLRequestConvertible {
     
     case login(email:String, password:String)
     case register(email:String, password: String, firstname: String, lastname: String)
     case posts
+    case post
+    case postWithImage
     
     private var method: HTTPMethod {
         switch self {
@@ -23,6 +25,10 @@ enum UserRouterApi: URLRequestConvertible {
             return .post
         case .posts:
             return .get
+        case .post:
+            return .post
+        case .postWithImage:
+            return .post
         }
     }
     
@@ -34,6 +40,10 @@ enum UserRouterApi: URLRequestConvertible {
             return "/API/users/register"
         case .posts:
             return "/API/post/post"
+        case .post:
+            return "/API/post/post"
+        case .postWithImage:
+            return "/API/post/post/image"
         }
     }
     
@@ -45,7 +55,12 @@ enum UserRouterApi: URLRequestConvertible {
             return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password, Constants.APIParameterKey.firstname: firstname, Constants.APIParameterKey.lastname: lastname]
         case .posts:
             return nil
+        case .post(let post):
+            return nil
+        case .postWithImage:
+            return nil
         }
+        
     }
     
     func asURLRequest() throws -> URLRequest {

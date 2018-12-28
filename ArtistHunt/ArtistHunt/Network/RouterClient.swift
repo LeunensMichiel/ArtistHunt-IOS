@@ -10,17 +10,17 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class UserClient {    
+class RouterClient {    
     static func login(email: String, password: String) -> Observable<User> {
-        return request(UserRouterApi.login(email: email, password: password))
+        return request(RouterApi.login(email: email, password: password))
     }
     
     static func register(email: String, password: String, firstname: String, lastname: String) -> Observable<User> {
-        return request(UserRouterApi.register(email: email, password: password, firstname: firstname, lastname: lastname))
+        return request(RouterApi.register(email: email, password: password, firstname: firstname, lastname: lastname))
     }
     
     static func getPosts() -> Observable<Array<Post>> {
-        return request(UserRouterApi.posts)
+        return request(RouterApi.posts)
     }
     
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
