@@ -21,3 +21,18 @@ class RealmUser: Object {
         return "_id"
     }
 }
+
+class RealmPost: Object {
+    @objc dynamic var _id: String? = ""
+    @objc dynamic var title: String? = ""
+    @objc dynamic var postdescription: String? = ""
+    @objc dynamic var type: String? = ""
+    @objc dynamic var user_id: String? = ""
+    @objc dynamic var post_image_filename: String? = ""
+    @objc dynamic var post_audio_filename: String? = ""
+    @objc dynamic var date: Date? = nil
+    
+    override static func primaryKey() -> String? {
+        return "_id"
+    }
+}

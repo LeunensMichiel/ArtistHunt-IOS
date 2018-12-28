@@ -13,8 +13,7 @@ enum UserRouterApi: URLRequestConvertible {
     
     case login(email:String, password:String)
     case register(email:String, password: String, firstname: String, lastname: String)
-    //    case posts
-    //    case post(id: Int)
+    case posts
     
     private var method: HTTPMethod {
         switch self {
@@ -22,8 +21,8 @@ enum UserRouterApi: URLRequestConvertible {
             return .post
         case .register:
             return .post
-            //        case .posts, .post:
-            //            return .get
+        case .posts:
+            return .get
         }
     }
     
@@ -33,6 +32,8 @@ enum UserRouterApi: URLRequestConvertible {
             return "/API/users/login"
         case .register:
             return "/API/users/register"
+        case .posts:
+            return "/API/post/post"
         }
     }
     
@@ -42,6 +43,8 @@ enum UserRouterApi: URLRequestConvertible {
             return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password]
         case .register(let email, let password, let firstname, let lastname):
             return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password, Constants.APIParameterKey.firstname: firstname, Constants.APIParameterKey.lastname: lastname]
+        case .posts:
+            return nil
         }
     }
     
@@ -56,6 +59,7 @@ enum UserRouterApi: URLRequestConvertible {
         // Common Headers
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        urlRequest.setValue("Bearer " + AuthenticationController.getToken()!, forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
         
         // Parameters
         let encoding: ParameterEncoding = {

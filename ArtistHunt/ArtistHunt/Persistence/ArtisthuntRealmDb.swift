@@ -46,5 +46,45 @@ class ArtisthuntRealmDb {
         let predicate = NSPredicate(format: "_id = %@", id)
         return realm.objects(RealmUser.self).filter(predicate)
     }
+    
+    //POSTS
+    func createDbPost(_id: String, title: String, postdescription: String, type: String, user_id: String, post_image_filename: String?, post_audio_filename: String?, date: Date) -> RealmPost {
+        let dbPost = RealmPost()
+        dbPost._id = _id
+        dbPost.title = title
+        dbPost.postdescription = postdescription
+        dbPost.type = type
+        dbPost.user_id = user_id
+        dbPost.post_image_filename = post_image_filename
+        dbPost.post_audio_filename = post_audio_filename
+        dbPost.date = date
+        return dbPost
+    }
+    
+    func savePost(post: RealmPost) {
+        try! realm.write {
+            realm.add(post)
+        }
+    }
+    func updatePost(post: RealmPost) {
+        try! realm.write {
+            realm.add(post, update: true)
+        }
+    }
+    func deletePost(post: RealmPost) {
+        try! realm.write {
+            realm.delete(post)
+        }
+    }
+    
+    public func findPostByID(by id: String) -> Results<RealmPost>
+    {
+        let predicate = NSPredicate(format: "_id = %@", id)
+        return realm.objects(RealmPost.self).filter(predicate)
+    }
+    
+    public func getAllPosts() -> Results<RealmPost> {
+        return realm.objects(RealmPost.self).sorted(byKeyPath: "date", ascending: false)
+    }
 
 }

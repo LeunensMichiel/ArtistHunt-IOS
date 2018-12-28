@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var postViewModel = PostViewModel()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! UINavigationController
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
+        } else {
+            postViewModel.getPosts()
         }
 
         return true

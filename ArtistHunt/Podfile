@@ -12,6 +12,9 @@ target 'ArtistHunt' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'KeychainSwift', '~> 13.0'
   pod 'RealmSwift', '~> 3.13'
+  pod 'Nuke', '~> 7.0'
+
+
 
   target 'ArtistHuntTests' do
     inherit! :search_paths

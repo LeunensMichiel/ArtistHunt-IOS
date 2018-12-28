@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
   - KeychainSwift (13.0.0)
+  - Nuke (7.5.2)
   - Realm (3.13.0):
     - Realm/Headers (= 3.13.0)
   - Realm/Headers (3.13.0)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
   - KeychainSwift (~> 13.0)
+  - Nuke (~> 7.0)
   - RealmSwift (~> 3.13)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
@@ -25,6 +27,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - KeychainSwift
+    - Nuke
     - Realm
     - RealmSwift
     - RxAtomic
@@ -35,6 +38,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
   Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
   RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -42,6 +46,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
 
-PODFILE CHECKSUM: c9e3481915a6929ae1a7cc4ee26776fedb21418e
+PODFILE CHECKSUM: e3642a88bfed8bc5aaa2ae1b13bfdcfe99260c90
 
 COCOAPODS: 1.5.3
