@@ -55,7 +55,7 @@ enum RouterApi: URLRequestConvertible {
             return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password, Constants.APIParameterKey.firstname: firstname, Constants.APIParameterKey.lastname: lastname]
         case .posts:
             return nil
-        case .post(let post):
+        case .post:
             return nil
         case .postWithImage:
             return nil

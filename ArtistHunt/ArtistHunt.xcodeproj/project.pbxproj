@@ -84,7 +84,7 @@
 		D0B8448F21D39FE600451B50 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0B8449121D3C48E00451B50 /* APIErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorConstants.swift; sourceTree = "<group>"; };
 		D0B8449321D4290200451B50 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
-		D0B8449521D44F5700451B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		D0B8449521D44F5700451B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B8449821D455BE00451B50 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D0B8449A21D46AC400451B50 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		D0B8449D21D470D000451B50 /* ArtisthuntRealmDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisthuntRealmDb.swift; sourceTree = "<group>"; };

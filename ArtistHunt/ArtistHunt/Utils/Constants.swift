@@ -16,6 +16,7 @@ struct Constants {
         static let email = "email"
         static let firstname = "firstname"
         static let lastname = "lastname"
+        static let post = "post"
     }
 }
 
