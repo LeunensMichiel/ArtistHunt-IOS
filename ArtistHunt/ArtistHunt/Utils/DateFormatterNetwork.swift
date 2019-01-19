@@ -11,7 +11,7 @@ import Foundation
 extension DateFormatter {
     static var postFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy  hh:mm"
+        formatter.dateFormat = "dd-MM-yyyy  HH:mm"
         return formatter
     }
 }

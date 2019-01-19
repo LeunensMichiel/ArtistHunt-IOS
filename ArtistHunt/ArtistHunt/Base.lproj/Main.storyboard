@@ -86,7 +86,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Post" image="plus" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Add Post" image="plus" selectedImage="plus" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="add_post_descriptionTxf" destination="1ai-Yp-8Y2" id="WRR-gd-9IG"/>
                         <outlet property="add_post_imageView" destination="hAy-av-8AS" id="Bj1-ef-czh"/>
@@ -129,7 +129,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V7G-yp-Ek7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="kv9-Hy-dcF"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" selectedImage="user" id="kv9-Hy-dcF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibf-dt-MXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +145,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Posts" image="home" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="home" selectedImage="home" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

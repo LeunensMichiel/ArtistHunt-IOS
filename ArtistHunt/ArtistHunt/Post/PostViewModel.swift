@@ -18,6 +18,7 @@ class PostViewModel {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { result in
                 result.forEach({ post in
+                    print(result)
                     if (self.localDB.findPostByID(by: post._id!).isEmpty) {
                         let realmpost = self.localDB.createDbPost(_id: post._id!, title: post.title!, postdescription: post.description!, type: post.type!, user_id: post.user_id!, post_image_filename: post.post_image_filename, post_audio_filename: post.post_audio_filename, date: post.date!)
                         self.localDB.savePost(post: realmpost)
