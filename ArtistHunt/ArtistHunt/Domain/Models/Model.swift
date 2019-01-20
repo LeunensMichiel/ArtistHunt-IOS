@@ -40,3 +40,7 @@ struct Post: Codable {
     var date: Date?
 }
 
+struct MessageUI {
+    var message: String?
+}
+

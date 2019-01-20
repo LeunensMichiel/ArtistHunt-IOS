@@ -15,10 +15,7 @@ class PostsViewController: UICollectionViewController {
     private let localDB = ArtisthuntRealmDb()
     private let formatter = DateFormatter()
     private let SERVER_IMG_URL = "http://projecten3studserver03.westeurope.cloudapp.azure.com:3001/images/"
-    private lazy var posts: Results<RealmPost> = {
-        localDB.getAllPosts()
-    }()
-    
+    private var postViewModel = PostViewModel()
     
     var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -32,31 +29,45 @@ class PostsViewController: UICollectionViewController {
         collectionView?.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "postCell")
         collectionView?.collectionViewLayout = layout
         // Do any additional setup after loading the view, typically from a nib.
-        formatter.dateFormat = "dd-MM-yyyy  hh:mm"
+        formatter.dateFormat = "dd-MM-yyyy  HH:mm"
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        // this is the replacement of implementing: "collectionView.addSubview(refreshControl)"
+        collectionView.refreshControl = refreshControl
+    }
+    
+    @objc func refresh(refreshControl: UIRefreshControl) {
+        postViewModel.getPosts()
+
+        
+        // somewhere in your code you might need to call:
+        refreshControl.endRefreshing()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        return postViewModel.posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCollectionViewCell
 
         
-        postCell.post_title.text = posts[indexPath.row].title
-        postCell.post_description.text = posts[indexPath.row].postdescription
+        postCell.post_title.text = postViewModel.posts[indexPath.row].title
+        postCell.post_description.text = postViewModel.posts[indexPath.row].postdescription
         
-        if (posts[indexPath.row].post_image_filename != nil) {
+        if (postViewModel.posts[indexPath.row].post_image_filename != nil) {
             postCell.imageWidth?.isActive = true
             postCell.imageHeight?.isActive = true
-            let url = URL(string: SERVER_IMG_URL + posts[indexPath.row].post_image_filename!)
+            let url = URL(string: SERVER_IMG_URL + postViewModel.posts[indexPath.row].post_image_filename!)
             Nuke.loadImage(with: url!, options: ImageLoadingOptions(transition: .fadeIn(duration: 0.33)), into: postCell.post_image)
         } else {
             postCell.imageWidth?.isActive = false
             postCell.imageHeight?.isActive = false
         }
         
-        postCell.post_date.text = formatter.string(from: posts[indexPath.row].date!)
+        postCell.post_date.text = formatter.string(from: postViewModel.posts[indexPath.row].date!)
         
         return postCell
     }

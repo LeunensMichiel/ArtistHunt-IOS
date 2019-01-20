@@ -11,11 +11,11 @@ import Alamofire
 
 enum RouterApi: URLRequestConvertible {
     
-    case login(email:String, password:String)
-    case register(email:String, password: String, firstname: String, lastname: String)
+    case login(email: String, password: String)
+    case register(email: String, password: String, firstname: String, lastname: String)
     case posts
-    case post
-    case postWithImage
+    case post(title: String, description: String, type: String, user_id: String, date: String)
+    case postWithImage(title: String, description: String, type: String, user_id: String, date: String, post_image_filename: String)
     
     private var method: HTTPMethod {
         switch self {
@@ -28,7 +28,7 @@ enum RouterApi: URLRequestConvertible {
         case .post:
             return .post
         case .postWithImage:
-            return .post
+            return .put
         }
     }
     
@@ -55,10 +55,10 @@ enum RouterApi: URLRequestConvertible {
             return [Constants.APIParameterKey.email: email, Constants.APIParameterKey.password: password, Constants.APIParameterKey.firstname: firstname, Constants.APIParameterKey.lastname: lastname]
         case .posts:
             return nil
-        case .post:
-            return nil
-        case .postWithImage:
-            return nil
+        case .post(let title, let description, let type, let user_id, let date):
+            return [Constants.APIParameterKey.title: title, Constants.APIParameterKey.description: description, Constants.APIParameterKey.type: type, Constants.APIParameterKey.user_id: user_id, Constants.APIParameterKey.date: date]
+        case .postWithImage(let title, let description, let type, let user_id, let date, let post_image_filename):
+            return [Constants.APIParameterKey.title: title, Constants.APIParameterKey.description: description, Constants.APIParameterKey.type: type, Constants.APIParameterKey.user_id: user_id, Constants.APIParameterKey.date: date, Constants.APIParameterKey.post_image_filename: post_image_filename]
         }
         
     }
