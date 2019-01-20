@@ -18,6 +18,10 @@ class PostViewModel {
         localDB.getAllPosts()
     }()
     
+    lazy var userposts: Results<RealmPost> = {
+        localDB.findPostsByUser(by: AuthenticationController.getUserId()!)
+    }()
+    
     func getPosts() {
         RouterClient.getPosts()
             .observeOn(MainScheduler.instance)

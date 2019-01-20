@@ -74,7 +74,9 @@ enum RouterApi: URLRequestConvertible {
         // Common Headers
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-        urlRequest.setValue("Bearer " + AuthenticationController.getToken()!, forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
+        if (AuthenticationController.getToken() != nil) {
+            urlRequest.setValue("Bearer " + AuthenticationController.getToken()!, forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
+        }
         
         // Parameters
         let encoding: ParameterEncoding = {

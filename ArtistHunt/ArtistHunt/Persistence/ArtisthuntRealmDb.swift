@@ -83,6 +83,11 @@ class ArtisthuntRealmDb {
         return realm.objects(RealmPost.self).filter(predicate)
     }
     
+    public func findPostsByUser(by id: String) -> Results<RealmPost> {
+        let predicate = NSPredicate(format: "user_id = %@", id)
+        return realm.objects(RealmPost.self).filter(predicate)
+    }
+    
     public func getAllPosts() -> Results<RealmPost> {
         return realm.objects(RealmPost.self).sorted(byKeyPath: "date", ascending: false)
     }

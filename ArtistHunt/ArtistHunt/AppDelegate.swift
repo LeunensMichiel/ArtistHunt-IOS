@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Check if user is already logged in and redirects accordingly
-        if (AuthenticationController.getToken() == nil && AuthenticationController.getToken() == "") {
+        if (AuthenticationController.getToken() == nil || AuthenticationController.getToken() == "") {
             let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! UINavigationController
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
