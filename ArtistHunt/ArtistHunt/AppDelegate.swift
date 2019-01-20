@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
         } else {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             postViewModel.getPosts()
         }
 

@@ -42,6 +42,8 @@ class RouterClient {
                 }
                 multipartFormData.append(image, withName: "file", fileName: "file.jpg", mimeType: "image/jpeg")
             }, to: "http://projecten3studserver03.westeurope.cloudapp.azure.com:3001/API/post/post/image", method: .put, headers: headers)
+            //Dit is een fout in ALAMOFIRE 5. De documentatie is nog niet up-to-date en er zit een fout in de source code aangezien hun documentatie en google elkaar tegenspreekt, en had dit pas als laatste geimplementeerd. Het kostte teveel tijd om nog te herschrijven optijd naar ALAMOFIRE 4. 
+            
 //            { (result) in
 //                switch result {
 //                case .success(let value):

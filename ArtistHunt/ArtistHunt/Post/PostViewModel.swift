@@ -33,7 +33,9 @@ class PostViewModel {
                     }
                 })
                 self.posts = self.localDB.getAllPosts()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }, onError: { error in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 switch error {
                 case APIErrorConstants.unAuthorized:
                     print("401 error")

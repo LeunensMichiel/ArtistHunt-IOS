@@ -37,9 +37,10 @@ class ProfileViewController: UIViewController {
         profileUIImage.layer.borderWidth = 5
         profileUIImage.layer.masksToBounds = false
         profileUIImage.layer.borderColor = UIColor.white.cgColor
-        profileUIImage.layer.cornerRadius = profileUIImage.frame.height/2 //This will change with corners of image and height/2 will make this circle shape
+        profileUIImage.layer.cornerRadius = profileUIImage.frame.height/2
         profileUIImage.clipsToBounds = true
     }
+    
     @IBAction func profilePictureClicked(_ sender: Any) {
         var config = YPImagePickerConfiguration()
         config.usesFrontCamera = true
@@ -76,6 +77,9 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Ik probeerde de link met het detailscherm hier werkende te krijgen, maar lukte hier niet helaas. Geen idee wat er foutliep.
+        
+        
 //        if segue.identifier == "showUserPostsSegue" {
 //            guard let splitViewController = segue.destination as? UISplitViewController,
 //                let leftNavController = splitViewController.viewControllers.first as? UINavigationController,

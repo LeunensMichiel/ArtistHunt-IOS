@@ -48,9 +48,12 @@ class LoginViewController: UIViewController {
                         
                         self.errorLabel.text = ""
 
+                        let dbUser = self.localDB.createDbUser(_id: result._id!, email: result.email!, firstname: result.firstname!, lastname: result.lastname!, token: result.token!, profileImage: result.profile_image_filename)
+                        
                         if (self.localDB.findUserByID(by: result._id!).isEmpty) {
-                            let dbUser = self.localDB.createDbUser(_id: result._id!, email: result.email!, firstname: result.firstname!, lastname: result.lastname!, token: result.token!, profileImage: result.profile_image_filename)
                             self.localDB.saveUser(user: dbUser)
+                        } else {
+                            self.localDB.updateUser(user: dbUser)
                         }
                         
                         self.performSegue(withIdentifier: "loginSegue", sender: self)

@@ -8,11 +8,13 @@
 
 import UIKit
 import YPImagePicker
+import RxSwift
 
 class AddPostViewController: UIViewController {
     @IBOutlet weak var add_post_titleTxf: UITextField!
     @IBOutlet weak var add_post_descriptionTxf: UITextField!
     @IBOutlet weak var add_post_imageView: UIImageView!
+    @IBOutlet weak var uiMessage: UILabel!
     
     private var postViewModel = PostViewModel()
     private var imageSelected = false
@@ -20,6 +22,10 @@ class AddPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        uiMessage.text = ""
     }
     
     @IBAction func post(_ sender: Any) {

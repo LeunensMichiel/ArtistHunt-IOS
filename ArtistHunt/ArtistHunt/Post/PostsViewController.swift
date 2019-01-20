@@ -13,9 +13,10 @@ import RealmSwift
 
 class PostsViewController: UICollectionViewController {
     private let localDB = ArtisthuntRealmDb()
-    private let formatter = DateFormatter()
     private let SERVER_IMG_URL = "http://projecten3studserver03.westeurope.cloudapp.azure.com:3001/images/"
     private var postViewModel = PostViewModel()
+    private let refreshControl = UIRefreshControl()
+
     
     var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -28,21 +29,21 @@ class PostsViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView?.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "postCell")
         collectionView?.collectionViewLayout = layout
-        // Do any additional setup after loading the view, typically from a nib.
-        formatter.dateFormat = "dd-MM-yyyy  HH:mm"
         
-        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
-        // this is the replacement of implementing: "collectionView.addSubview(refreshControl)"
         collectionView.refreshControl = refreshControl
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh(refreshControl: refreshControl)
     }
     
     @objc func refresh(refreshControl: UIRefreshControl) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         postViewModel.getPosts()
-
-        
-        // somewhere in your code you might need to call:
+        self.collectionView?.reloadData()
         refreshControl.endRefreshing()
     }
 
@@ -67,7 +68,7 @@ class PostsViewController: UICollectionViewController {
             postCell.imageHeight?.isActive = false
         }
         
-        postCell.post_date.text = formatter.string(from: postViewModel.posts[indexPath.row].date!)
+        postCell.post_date.text = DateFormatter.postFormatter.string(from: postViewModel.posts[indexPath.row].date!)
         
         return postCell
     }
