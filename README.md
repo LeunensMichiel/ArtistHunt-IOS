@@ -6,7 +6,7 @@ This is an app for musicians, by fellow musicians. Find eachother, colab and mak
 
 ### Prerequisites
 
-An Iphone with at lease IOS 12
+An Iphone with at least IOS 12
 
 ## Documentation
 
