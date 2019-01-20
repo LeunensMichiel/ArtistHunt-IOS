@@ -51,10 +51,11 @@ class PostViewModel {
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { result in
-                    print(result)
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     let realmpost = self.localDB.createDbPost(_id: result._id!, title: result.title!, postdescription: result.description!, type: result.type!, user_id: result.user_id!, post_image_filename: result.post_image_filename, post_audio_filename: result.post_audio_filename, date: result.date!)
                     self.localDB.savePost(post: realmpost)
             }, onError: { error in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 switch error {
                 case APIErrorConstants.unAuthorized:
                     print("401 error")

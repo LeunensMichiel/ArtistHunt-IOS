@@ -55,6 +55,7 @@ class AddPostViewController: UIViewController {
             postViewModel.addImagePost(title: title, description: description, type: "IMAGE", user_id: AuthenticationController.getUserId()!, date: date, image: imageData)
 
         } else {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             postViewModel.addPost(title: title, description: description, type: "TEXT", user_id: AuthenticationController.getUserId()!, date: date)
         }
     }
